@@ -34,11 +34,11 @@ Hasil pengujian menunjukkan bahwa sebagian besar skenario berjalan dengan baik, 
 FinalProject_ASTQA_Kelompok7/
 ├── 01_Documents/
 │   ├── Document_SRS.pdf          # Software Requirements Specification
-│   └── Document_SDD.pdf              # Software Design Document + ERD + API Contract
+│   └── Document_SDD.pdf          # Software Design Document + ERD + API Contract
 │
 ├── 02_Test_Plans_and_Reports/
 │   ├── Master_Test_Plan_and_Report.pdf      # Master test plan + executive summary semua level
-│   ├── Test_Cases_Matrix_EP_BVA.pdf         # 66 Test Case (EP + BVA, landscape)
+│   ├── Test_Cases_Matrix_(EP & BVA).xlsx     # 66 Test Case (EP + BVA, landscape)
 │   └── Defect_Log_and_UAT_Signoff.pdf       # Defect log 4 item + UAT sign-off 4 role
 │
 └── 03_Test_Scripts_and_Automation/
