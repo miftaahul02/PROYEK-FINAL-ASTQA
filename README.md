@@ -1,21 +1,32 @@
 # Final Project — Advanced Software Testing & Quality Assurance
 ## Sistem Informasi SMA Cendekia Nusantara
 
-**Kelompok 7** | Semester Genap 2025/2026
+**Kelompok 7**  
+**Kelas:** RPL A
 
 | No | Nama | NIM |
 |----|------|-----|
-| 1 | Miftahul Jannah | 023 |
-| 2 | Dian Ramadhani | 323 |
-| 3 | Futri Ayu Resky Amalia | 623 |
-| 4 | Syarifah Azizah. M | 423 |
+| 1 | Miftahul Jannah | 105841116023 |
+| 2 | Dian Ramadhani | 105841116323 |
+| 3 | Futri Ayu Resky Amalia | 105841117623 |
+| 4 | Syarifah Azizah. M | 105841106423 |
 
 ## Media Project
 
 - Video Demo YouTube: https://youtu.be/nMR-HD4IrKo
 - Publikasi Instagram: https://www.instagram.com/reel/Db0LfkYtwOrFR5ffYIwd1CyRSL1f3mPsyFYR7Y0/?igsh=MnVrcnp6bmV6dHZh
+
 ---
 
+## Ringkasan Project
+
+Project ini merupakan hasil akhir mata kuliah Advanced Software Testing & Quality Assurance yang berfokus pada pengujian aplikasi `Sistem Informasi SMA Cendekia Nusantara`. Project ini bertujuan untuk menyusun dokumen pengujian, test case, laporan hasil testing, defect log, dan automation testing sebagai bagian dari proses verifikasi dan validasi kualitas perangkat lunak.
+
+Pengujian dilakukan pada beberapa level, yaitu `unit testing`, `integration testing`, `system testing`, `performance/load testing`, `user acceptance testing (UAT)`, dan `end-to-end UI testing`. Tools yang digunakan meliputi `Jest`, `Postman/Newman`, dan `Playwright`.
+
+Hasil pengujian menunjukkan bahwa sebagian besar skenario berjalan dengan baik, dengan `84 test passed` pada unit dan integration test serta `coverage 98.88%`. Selain itu, defect yang ditemukan selama pengujian telah didokumentasikan sebagai bahan evaluasi kualitas sistem.
+
+---
 
 ## Struktur Repository
 
