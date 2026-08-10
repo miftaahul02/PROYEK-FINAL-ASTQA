@@ -1,0 +1,286 @@
+﻿{
+  "info": {
+    "name": "SMA Cendekia Nusantara - API & Load Test Collection",
+    "_postman_id": "astqa-kelompok7-2026",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" },
+    { "key": "accessToken", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "01 - Health Check",
+      "item": [
+        {
+          "name": "GET /health - Server Status",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('Server healthy', () => { pm.expect(pm.response.json().status).to.eql('healthy'); });",
+            "pm.test('Response time < 500ms', () => pm.expect(pm.response.responseTime).to.be.below(500));"
+          ]}}],
+          "request": { "method": "GET", "url": "{{baseUrl}}/health" }
+        }
+      ]
+    },
+    {
+      "name": "02 - Authentication",
+      "item": [
+        {
+          "name": "POST /auth/login - Valid (EP Valid)",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('Response berisi accessToken', () => {",
+            "  const body = pm.response.json();",
+            "  pm.expect(body.success).to.be.true;",
+            "  pm.expect(body.data).to.have.property('accessToken');",
+            "  pm.collectionVariables.set('accessToken', body.data.accessToken);",
+            "});",
+            "pm.test('Password tidak dikembalikan', () => {",
+            "  pm.expect(JSON.stringify(pm.response.json())).to.not.include('password');",
+            "});",
+            "pm.test('Response time < 2000ms', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{baseUrl}}/api/auth/login",
+            "body": { "mode": "raw", "raw": "{\"identifier\":\"admin1\",\"password\":\"password123\"}" }
+          }
+        },
+        {
+          "name": "POST /auth/login - Kredensial Salah (EP Invalid)",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 401 Unauthorized', () => pm.response.to.have.status(401));",
+            "pm.test('success = false', () => pm.expect(pm.response.json().success).to.be.false);",
+            "pm.test('Response time < 2000ms', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{baseUrl}}/api/auth/login",
+            "body": { "mode": "raw", "raw": "{\"identifier\":\"admin1\",\"password\":\"passwordsalah\"}" }
+          }
+        },
+        {
+          "name": "GET /auth/me - Token Valid",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('User data ada role', () => {",
+            "  pm.expect(pm.response.json().success).to.be.true;",
+            "  pm.expect(pm.response.json().data).to.have.property('role');",
+            "});",
+            "pm.test('Response time < 1000ms', () => pm.expect(pm.response.responseTime).to.be.below(1000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/auth/me"
+          }
+        },
+        {
+          "name": "GET /students - Tanpa Token (EP Security)",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 401 tanpa token', () => pm.response.to.have.status(401));",
+            "pm.test('success = false', () => pm.expect(pm.response.json().success).to.be.false);"
+          ]}}],
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/students" }
+        }
+      ]
+    },
+    {
+      "name": "03 - Students API",
+      "item": [
+        {
+          "name": "GET /students?page=1&limit=10 - List Paginated",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('Ada pagination', () => {",
+            "  const body = pm.response.json();",
+            "  pm.expect(body.success).to.be.true;",
+            "  pm.expect(body.data).to.be.an('array');",
+            "  pm.expect(body.pagination).to.have.property('total');",
+            "});",
+            "pm.test('Response time < 2000ms', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/students?page=1&limit=10"
+          }
+        },
+        {
+          "name": "GET /students?search=A - Search Siswa",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('Data adalah array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+            "pm.test('Response time < 2000ms', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/students?search=A&page=1&limit=5"
+          }
+        },
+        {
+          "name": "GET /students/99999 - Not Found (EP Invalid)",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
+            "pm.test('success = false', () => pm.expect(pm.response.json().success).to.be.false);"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/students/99999"
+          }
+        }
+      ]
+    },
+    {
+      "name": "04 - Teachers API",
+      "item": [
+        {
+          "name": "GET /teachers?page=1&limit=10 - List",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('Data adalah array guru', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+            "pm.test('Response time < 2000ms', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/teachers?page=1&limit=10"
+          }
+        }
+      ]
+    },
+    {
+      "name": "05 - Dashboard & Reports",
+      "item": [
+        {
+          "name": "GET /dashboard/stats - Admin",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('Statistik tersedia', () => pm.expect(pm.response.json().success).to.be.true);",
+            "pm.test('Response time < 2000ms', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/dashboard/stats"
+          }
+        },
+        {
+          "name": "GET /reports/active-semester",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('Semester aktif ditemukan', () => {",
+            "  pm.expect(pm.response.json().success).to.be.true;",
+            "  pm.expect(pm.response.json().data).to.have.property('id');",
+            "});",
+            "pm.test('Response time < 1000ms', () => pm.expect(pm.response.responseTime).to.be.below(1000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/reports/active-semester"
+          }
+        },
+        {
+          "name": "GET /dashboard/activity-logs?page=1&limit=10",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+            "pm.test('Activity logs adalah array', () => pm.expect(pm.response.json().data).to.be.an('array'));",
+            "pm.test('Response time < 2000ms', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/dashboard/activity-logs?page=1&limit=10"
+          }
+        }
+      ]
+    },
+    {
+      "name": "06 - RBAC & Security",
+      "item": [
+        {
+          "name": "DELETE /students/1 - Tanpa Token (401)",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 401 tanpa token', () => pm.response.to.have.status(401));"
+          ]}}],
+          "request": { "method": "DELETE", "url": "{{baseUrl}}/api/students/1" }
+        },
+        {
+          "name": "GET /api/nonexistent - 404 Handler",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('Status 404', () => pm.response.to.have.status(404));",
+            "pm.test('success = false', () => pm.expect(pm.response.json().success).to.be.false);"
+          ]}}],
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/nonexistent-route" }
+        }
+      ]
+    },
+    {
+      "name": "07 - Load Test (Performance SLA)",
+      "item": [
+        {
+          "name": "[LOAD] GET /health - Baseline",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[LOAD] Health OK', () => pm.response.to.have.status(200));",
+            "pm.test('[LOAD] Response time < 2000ms (SLA)', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": { "method": "GET", "url": "{{baseUrl}}/health" }
+        },
+        {
+          "name": "[LOAD] GET /auth/me - Auth Endpoint",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[LOAD] Auth me OK', () => pm.response.to.have.status(200));",
+            "pm.test('[LOAD] Response time < 2000ms (SLA)', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/auth/me"
+          }
+        },
+        {
+          "name": "[LOAD] GET /students?page=1&limit=10 - List Siswa",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[LOAD] Students OK', () => pm.response.to.have.status(200));",
+            "pm.test('[LOAD] Response time < 2000ms (SLA)', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/students?page=1&limit=10"
+          }
+        },
+        {
+          "name": "[LOAD] GET /teachers?page=1&limit=10 - Redis Cache",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[LOAD] Teachers OK', () => pm.response.to.have.status(200));",
+            "pm.test('[LOAD] Response time < 2000ms (SLA)', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/teachers?page=1&limit=10"
+          }
+        },
+        {
+          "name": "[LOAD] GET /dashboard/stats",
+          "event": [{ "listen": "test", "script": { "exec": [
+            "pm.test('[LOAD] Dashboard OK', () => pm.response.to.have.status(200));",
+            "pm.test('[LOAD] Response time < 2000ms (SLA)', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          ]}}],
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/api/dashboard/stats"
+          }
+        }
+      ]
+    }
+  ]
+}

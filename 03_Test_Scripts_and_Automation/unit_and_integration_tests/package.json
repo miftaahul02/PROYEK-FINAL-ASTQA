@@ -1,0 +1,36 @@
+{
+  "name": "unit_and_integration_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "test:unit": "jest --coverage --verbose --testPathPattern=unit",
+    "test:integration": "jest --coverage --verbose --testPathPattern=integration"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 70,
+        "branches": 70,
+        "functions": 70,
+        "lines": 70
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@jest/globals": "^30.4.1",
+    "bcryptjs": "^3.0.3",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.3",
+    "supertest": "^6.3.4"
+  }
+}

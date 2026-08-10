@@ -1,0 +1,23 @@
+{
+  "name": "ui_automation_playwright",
+  "version": "1.0.0",
+  "description": "UI/E2E Automation Tests - SMA Cendekia Nusantara | ASTQA Kelompok 7",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright test --reporter=html && playwright show-report",
+    "test:auth": "playwright test tests/auth.spec.js",
+    "test:students": "playwright test tests/students.spec.js",
+    "test:attendance": "playwright test tests/attendance.spec.js",
+    "test:grades": "playwright test tests/grades.spec.js",
+    "test:dashboard": "playwright test tests/dashboard.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1"
+  }
+}

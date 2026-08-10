@@ -1,0 +1,1017 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--headed",
+      "--timeout=6000",
+      "--workers=1"
+    ],
+    "configFile": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\playwright.config.js",
+    "rootDir": "C:/Users/LENOVO/OneDrive/Documents/Default Project/FinalProject_ASTQA_Kelompok7/03_Test_Scripts_and_Automation/ui_automation_katalon_cypress/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/LENOVO/OneDrive/Documents/Default Project/FinalProject_ASTQA_Kelompok7/03_Test_Scripts_and_Automation/ui_automation_katalon_cypress/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/LENOVO/OneDrive/Documents/Default Project/FinalProject_ASTQA_Kelompok7/03_Test_Scripts_and_Automation/ui_automation_katalon_cypress/tests",
+        "testIgnore": [
+          "**/global.setup.js"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 6000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "attendance.spec.js",
+      "file": "attendance.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC-E2E-ATT: Manajemen Absensi",
+          "file": "attendance.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-ATT-01: Halaman absensi dapat diakses dan tabel tampil",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4761,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:06:47.509Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b59cef2c191e6be43e3f-fd6e3c83520c57f93163",
+              "file": "attendance.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-ATT-02: Input absensi harian berhasil disimpan",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4026,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:06:53.246Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b59cef2c191e6be43e3f-fda14c00777039d8cf17",
+              "file": "attendance.spec.js",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-ATT-03: Filter absensi berdasarkan tanggal menampilkan data yang sesuai",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2765,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:06:57.317Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b59cef2c191e6be43e3f-258290732f960090e977",
+              "file": "attendance.spec.js",
+              "line": 39,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-ATT-04: Export data absensi ke Excel memicu unduhan file",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2764,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:00.117Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b59cef2c191e6be43e3f-a7e3b1fb2b6e0745f272",
+              "file": "attendance.spec.js",
+              "line": 46,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "auth.spec.js",
+      "file": "auth.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC-E2E-AUTH: Authentication & Authorization",
+          "file": "auth.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-AUTH-01: Login valid sebagai admin berhasil",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2575,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:02.937Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d5ed79a6b333c2ba7209-ee11f32546ee98638b99",
+              "file": "auth.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-AUTH-02: Login dengan password salah menampilkan pesan error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4827,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:05.534Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d5ed79a6b333c2ba7209-bf1a75b0d02af3a0312c",
+              "file": "auth.spec.js",
+              "line": 35,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-AUTH-03: Login tanpa username — form validation muncul",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3202,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:10.384Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d5ed79a6b333c2ba7209-62d4bf201effec100f90",
+              "file": "auth.spec.js",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-AUTH-04: Akses halaman siswa tanpa login → redirect ke /login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3403,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:13.649Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d5ed79a6b333c2ba7209-af04201bedf299b8427d",
+              "file": "auth.spec.js",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-AUTH-05: Logout berhasil, session terhapus",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3218,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:17.092Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d5ed79a6b333c2ba7209-548cfa443eddae733d33",
+              "file": "auth.spec.js",
+              "line": 73,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.js",
+      "file": "dashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC-E2E-DASH: Dashboard & Navigasi",
+          "file": "dashboard.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-DASH-01: Dashboard menampilkan statistik jumlah siswa, guru, dan absensi",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3146,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:20.377Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a1bb41a2bd6df77ed2f7-71c81b1b56b23f0cd7a4",
+              "file": "dashboard.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-DASH-02: Semua item menu navigasi dapat diklik dan berpindah halaman",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 7194,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\tests\\dashboard.spec.js",
+                            "column": 20,
+                            "line": 43
+                          },
+                          "message": "Error: page.waitForLoadState: Test timeout of 6000ms exceeded.\n\n\u001b[0m \u001b[90m 41 |\u001b[39m         expect(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoMatch(menu\u001b[33m.\u001b[39mexpectedUrl)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/dashboard'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m       }\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\tests\\dashboard.spec.js:43:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:23.557Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\dashboard-TC-E2E-DASH-Dash-6f6dc-iklik-dan-berpindah-halaman-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\dashboard-TC-E2E-DASH-Dash-6f6dc-iklik-dan-berpindah-halaman-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\dashboard-TC-E2E-DASH-Dash-6f6dc-iklik-dan-berpindah-halaman-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\dashboard-TC-E2E-DASH-Dash-6f6dc-iklik-dan-berpindah-halaman-chromium\\trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5667,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-08-08T09:07:32.295Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "a1bb41a2bd6df77ed2f7-76814d079ca5d0499a6b",
+              "file": "dashboard.spec.js",
+              "line": 29,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-DASH-03: Halaman dashboard responsif di viewport mobile (375x667)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3054,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:38.354Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a1bb41a2bd6df77ed2f7-25e8d57bc1432e8bec77",
+              "file": "dashboard.spec.js",
+              "line": 48,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "grades.spec.js",
+      "file": "grades.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC-E2E-GRD: Manajemen Nilai",
+          "file": "grades.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-GRD-01: Halaman nilai dapat diakses dan menampilkan data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3028,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:41.447Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f1fabe0a0b8e893b4eb0-d71463a10742c07816a3",
+              "file": "grades.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-GRD-02: Halaman nilai menampilkan dropdown filter kelas dan mata pelajaran",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3767,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:44.498Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f1fabe0a0b8e893b4eb0-829f38f93f34aea61466",
+              "file": "grades.spec.js",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-GRD-03: Input nilai 101 (>100) tidak dapat dimasukkan (HTML max constraint)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3233,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:48.302Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f1fabe0a0b8e893b4eb0-77f02f4cec06a0780e04",
+              "file": "grades.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-GRD-04: Halaman laporan/rekap nilai dapat diakses via menu Reports",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3144,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:51.553Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f1fabe0a0b8e893b4eb0-4c6f000fda55af4cfe94",
+              "file": "grades.spec.js",
+              "line": 49,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "students.spec.js",
+      "file": "students.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC-E2E-STD: Manajemen Data Siswa",
+          "file": "students.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-STD-01: Daftar siswa tampil dengan tabel dan pagination",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3091,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:54.736Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "408ffe3caf7b4cf0f294-1616ad4169fb433db6af",
+              "file": "students.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-STD-02: Pencarian siswa berdasarkan nama menampilkan hasil relevan",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4708,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:07:57.870Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "408ffe3caf7b4cf0f294-04ded69b5bb3147567af",
+              "file": "students.spec.js",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-STD-03: Klik detail siswa menampilkan halaman/modal profil",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4240,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:08:02.616Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "408ffe3caf7b4cf0f294-e2e71b11e10e5e4f6d54",
+              "file": "students.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-STD-04: Tambah siswa baru dengan data valid berhasil",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4199,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:08:06.874Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "408ffe3caf7b4cf0f294-12793a2830232a191fe5",
+              "file": "students.spec.js",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-STD-05: Tambah siswa dengan NIS yang sudah ada → pesan error duplikat",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 6000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 6937,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T09:08:11.102Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\students-TC-E2E-STD-Manaje-bb3bc--ada-→-pesan-error-duplikat-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\students-TC-E2E-STD-Manaje-bb3bc--ada-→-pesan-error-duplikat-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\students-TC-E2E-STD-Manaje-bb3bc--ada-→-pesan-error-duplikat-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\students-TC-E2E-STD-Manaje-bb3bc--ada-→-pesan-error-duplikat-chromium\\trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 7780,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\tests\\students.spec.js",
+                            "column": 16,
+                            "line": 99
+                          },
+                          "message": "Error: page.waitForTimeout: Test timeout of 6000ms exceeded.\n\n\u001b[0m \u001b[90m  97 |\u001b[39m\n \u001b[90m  98 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button:has-text(\"Simpan\")'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  99 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 100 |\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[90m// Verifikasi: modal masih terbuka (form tidak submit) ATAU pesan error tampil\u001b[39m\n \u001b[90m 102 |\u001b[39m     \u001b[36mconst\u001b[39m modalStillOpen \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Tambah Siswa Baru'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\tests\\students.spec.js:99:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-08-08T09:08:19.547Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\students-TC-E2E-STD-Manaje-bb3bc--ada-→-pesan-error-duplikat-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\students-TC-E2E-STD-Manaje-bb3bc--ada-→-pesan-error-duplikat-chromium-retry1\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\students-TC-E2E-STD-Manaje-bb3bc--ada-→-pesan-error-duplikat-chromium-retry1\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\OneDrive\\Documents\\Default Project\\FinalProject_ASTQA_Kelompok7\\03_Test_Scripts_and_Automation\\ui_automation_katalon_cypress\\test-results\\students-TC-E2E-STD-Manaje-bb3bc--ada-→-pesan-error-duplikat-chromium-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "408ffe3caf7b4cf0f294-987f34cb16b37eff3647",
+              "file": "students.spec.js",
+              "line": 78,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-08T09:06:47.073Z",
+    "duration": 101454.999,
+    "expected": 19,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 1
+  }
+}
